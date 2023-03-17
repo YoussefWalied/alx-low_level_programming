@@ -1,25 +1,29 @@
 #include <stdlib.h>
 #include <time.h>
-#include<stdio.h>
+#include <stdio.h>
 /* more headers goes there */
+
+/* betty style doc for function main goes there */
 
 /**
  * main - Entry point
- * Description: prints a message that depends on
- * last digit of the random number generated
- * Return: Always 0 Success
-*/
+ * Return: Always 1 (Success)
+ */
 int main(void)
 {
-	int count;
+	int i, j;
 
-	for (count = 0; count < 10; count++)
+	for (i = 48; i <= 57; i++)
 	{
-		putchar(count + '0');
-		if (count != 9)
+		for (j = i + 1; j <= 57; j++)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(i);
+			putchar(j);
+			if (!(i == 56 && j == 57))
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
