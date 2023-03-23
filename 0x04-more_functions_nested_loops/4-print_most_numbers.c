@@ -1,26 +1,19 @@
 #include "main.h"
 
 /**
- * more_numbers - tests if input given is a digit
+ * print_most_numbers - tests if input given is a digit
  * Return: void
  *
  */
 
-void more_numbers(void)
+void print_most_numbers(void)
 {
-    int i, j;
+    int i;
 
-    for (j = 0; j < 10; j++)
+    for (i = 48; i < 48 + 10; i++)
     {
-        for (i = 0; i <= 14; i++)
-        {
-            if (i > 9)
-            {
-                _putchar((i / 10) + '0');
-            }
-            _putchar((i % 10) + '0');
-
-        }
-        _putchar('\n');
+        if (!(i - 48 == 2 || i - 48 == 4))
+            _putchar(i);
     }
+    _putchar('\n');
 }
